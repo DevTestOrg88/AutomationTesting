@@ -1,1 +1,1 @@
-print ("First script")
+print ("First script!")
