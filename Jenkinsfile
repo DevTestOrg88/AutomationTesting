@@ -24,7 +24,7 @@ stages {
                     adapters: [
                         [$class: 'Tomcat9xAdapter',
                          credentialsId: '4aff5716-dda4-4c4f-8dff-d14020358397',
-                         url: 'http://3.110.54.224:9090/manager/text',
+                         url: 'http://13.203.79.48:9090/manager/text',
                          path: '',
                          alternativeDeploymentContext: ''
                         ]
@@ -35,6 +35,11 @@ stages {
             }
         }
     sleep 10
+    stage('CheckoutCodeAutomationCode') {
+    steps {
+      git branch: "master", url: 'https://github.com/DevTestOrg88/TestProject.git'
+    }
+  }
     stage('Run Selenium Tests') {
             steps {
                 // Setup python environment, install dependencies and run test
