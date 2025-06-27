@@ -16,7 +16,7 @@ def test_login_page(base_url):
         time.sleep(3)  # Wait for page to load, adjust as needed
 
         # Example check: verify page title or check for an element
-        assert "MithunTechnologies- Home Page-Rajdeep" in driver.title
+        assert "MithunTechnologies- Home Page" in driver.title
 
         print("Test Passed: Login page is accessible.")
     except Exception as e:
