@@ -43,7 +43,9 @@ stages {
     stage('Run Selenium Tests') {
             steps {
                 // Setup python environment, install dependencies and run test
+                // !/bin/bash to Run everything in a single shell session
                 sh '''
+                    !/bin/bash
                     python3 -m venv venv
                     . venv/bin/activate
                     pip install -r requirements.txt
